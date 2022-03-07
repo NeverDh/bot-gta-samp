@@ -24,8 +24,30 @@ def caixinha():
     pyautogui.write('/caixinha')
     time.sleep(1)
     pyautogui.hotkey('enter')
-    time.sleep(300)
-    andar()
+    time.sleep(10)
+    identificar()
 
 
-andar()
+def login():
+    time.sleep(2)
+    posLog = pyautogui.locateOnScreen("alvos/entrar.png")
+    x = posLog.left
+    y = posLog.top
+
+    pyautogui.click(x+25, y+15, duration= 2)
+    time.sleep(20)
+    identificar()
+
+
+
+def identificar():
+    time.sleep(5)
+    posLog = pyautogui.locateOnScreen("alvos/entrar.png")
+    if posLog != None:
+        login()
+    else:
+        andar()
+
+
+identificar()
+
