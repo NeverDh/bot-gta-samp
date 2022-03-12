@@ -24,7 +24,7 @@ def caixinha():
     pyautogui.write('/caixinha')
     time.sleep(1)
     pyautogui.hotkey('enter')
-    time.sleep(10)
+    time.sleep(1200)
     identificar()
 
 
